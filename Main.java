@@ -23,6 +23,7 @@ public class Main {
         System.out.println("Кол-во несовершеннолетних: " + result1);
 
         List<String> result2 = persons.stream()
+                .filter(x -> x.getSex() == Sex.MAN)
                 .filter(x -> x.getAge() > 18)
                 .filter(x -> x.getAge() < 27)
                 .map(Person::getFamily)
